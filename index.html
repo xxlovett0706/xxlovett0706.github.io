@@ -174,6 +174,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/21/javascript/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/21/javascript/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -226,12 +240,32 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-21 18:41:09 / 修改时间：19:14:13" itemprop="dateCreated datePublished" datetime="2021-04-21T18:41:09+08:00">2021-04-21</time>
+              <time title="创建时间：2021-04-21 18:41:09" itemprop="dateCreated datePublished" datetime="2021-04-21T18:41:09+08:00">2021-04-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-22 00:14:59" itemprop="dateModified" datetime="2021-04-22T00:14:59+08:00">2021-04-22</time>
+              </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/21/javascript/var%E3%80%81let%E5%92%8Cconst/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/21/javascript/var%E3%80%81let%E5%92%8Cconst/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -242,7 +276,72 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="什么是-let-和-const"><a href="#什么是-let-和-const" class="headerlink" title="什么是 let 和 const"></a>什么是 let 和 const</h2><h2 id="为什么要用-let-和-const"><a href="#为什么要用-let-和-const" class="headerlink" title="为什么要用 let 和 const"></a>为什么要用 let 和 const</h2><h3 id="使用-var-声明变量可能会出现的问题"><a href="#使用-var-声明变量可能会出现的问题" class="headerlink" title="使用 var 声明变量可能会出现的问题"></a>使用 var 声明变量可能会出现的问题</h3><h3 id="var、let-和-const-之间的区别"><a href="#var、let-和-const-之间的区别" class="headerlink" title="var、let 和 const 之间的区别"></a>var、let 和 const 之间的区别</h3><h2 id="该如何使用-let-和-const"><a href="#该如何使用-let-和-const" class="headerlink" title="该如何使用 let 和 const"></a>该如何使用 let 和 const</h2><h3 id="let-和-const-优先使用哪个"><a href="#let-和-const-优先使用哪个" class="headerlink" title="let 和 const 优先使用哪个"></a>let 和 const 优先使用哪个</h3><h3 id="const-定义引用类型时的问题"><a href="#const-定义引用类型时的问题" class="headerlink" title="const 定义引用类型时的问题"></a>const 定义引用类型时的问题</h3><h3 id="Object-freeze-冻结对象"><a href="#Object-freeze-冻结对象" class="headerlink" title="Object.freeze() 冻结对象"></a>Object.freeze() 冻结对象</h3><h2 id="彻底抛弃-var-变量声明吗？"><a href="#彻底抛弃-var-变量声明吗？" class="headerlink" title="彻底抛弃 var 变量声明吗？"></a>彻底抛弃 var 变量声明吗？</h2><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>刚开始学习 JavaScript 的时候，我相信大部分人和我一样，最先学到的几个语句不外乎是<code>console.log()</code> 和 <code>var num = 10;</code>，可见<code>var</code>操作符多么重要。<code>var</code>操作符使用起来非常简单，但想要不出错却不容易，</p>
+<h2 id="什么是-let-和-const"><a href="#什么是-let-和-const" class="headerlink" title="什么是 let 和 const"></a>什么是 let 和 const</h2><p><code>let</code>、<code>const</code>和<code>var</code>一样，都是声明变量的操作符，使用方式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;澈水&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="keyword">const</span> job = <span class="string">&#x27;hacker&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="为什么要用-let-和-const"><a href="#为什么要用-let-和-const" class="headerlink" title="为什么要用 let 和 const"></a>为什么要用 let 和 const</h2><p><code>var</code>操作符在声明变量的时候会出现一些副作用，为此 ECMAScript6 专门更新了两个新的操作符<code>let</code>和<code>const</code>来避免出现使用<code>var</code>带来的意外。</p>
+<h3 id="使用-var-声明变量可能会出现的问题"><a href="#使用-var-声明变量可能会出现的问题" class="headerlink" title="使用 var 声明变量可能会出现的问题"></a>使用 var 声明变量可能会出现的问题</h3><ol>
+<li><p><code>var</code> 声明提升</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(name); <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;澈水&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 相当于</span></span><br><span class="line"><span class="comment">// var name;</span></span><br><span class="line"><span class="comment">// console.log(name);</span></span><br><span class="line"><span class="comment">// name = &#x27;澈水&#x27;;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>var</code> 只有函数作用域，没有块级作用域</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">&#x27;澈水&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">false</span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> name = <span class="string">&#x27;cheshui&#x27;</span>; <span class="comment">// 这里会污染整个箭头函数作用域</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">show(); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>var</code> 声明的变量可能会污染全局变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> screenLeft = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.screenLeft); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="var、let-和-const-之间的区别"><a href="#var、let-和-const-之间的区别" class="headerlink" title="var、let 和 const 之间的区别"></a>var、let 和 const 之间的区别</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th align="center">var</th>
+<th align="center">let</th>
+<th align="center">const</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>声明提升</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td>暂时性死区（TDZ）</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>函数作用域</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>块级作用域</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+</tbody></table>
+<p>暂时性死区（TDZ）与声明提升相对，在声明变量前不可使用变量，表现如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(name);</span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;澈水&#x27;</span>; <span class="comment">// Uncaught ReferenceError: Cannot access &#x27;name&#x27; before initialization</span></span><br></pre></td></tr></table></figure>
+
+<p>块级作用域和函数作用域就不用多说了。</p>
+<h2 id="该如何使用-let-和-const"><a href="#该如何使用-let-和-const" class="headerlink" title="该如何使用 let 和 const"></a>该如何使用 let 和 const</h2><p>使用<code>const</code>操作符声明变量时必须同时初始化变量。</p>
+<h3 id="let-和-const-优先使用哪个"><a href="#let-和-const-优先使用哪个" class="headerlink" title="let 和 const 优先使用哪个"></a>let 和 const 优先使用哪个</h3><p>我个人推荐优先使用<code>const</code>操作符，当一个变量需要重新赋值的时候，再使用<code>let</code>操作符。理由如下：</p>
+<ul>
+<li>执行效率高</li>
+<li>避免声明过的变量被意外覆盖</li>
+</ul>
+<h3 id="const-定义引用类型时的问题"><a href="#const-定义引用类型时的问题" class="headerlink" title="const 定义引用类型时的问题"></a>const 定义引用类型时的问题</h3><p><code>const</code>操作符声明的变量不可改变，其实质是指向的内存地址不可改变，所以当用<code>const</code>声明一个变量并赋值一个引用类型时，其引用类型可以操作。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;澈水&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;cheshui&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// cheshui</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="冻结对象"><a href="#冻结对象" class="headerlink" title="冻结对象"></a>冻结对象</h3><p>使用<code>Object</code>的静态方法<code>Object.freeze()</code>，便可解决上述问题：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;澈水&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.freeze(person);</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;cheshui&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// 澈水</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="彻底抛弃-var-变量声明吗？"><a href="#彻底抛弃-var-变量声明吗？" class="headerlink" title="彻底抛弃 var 变量声明吗？"></a>彻底抛弃 var 变量声明吗？</h2><p>以我个人的理解，我们确实应该抛弃<code>var</code>，因为<code>var</code>能做到的，<code>let</code>和<code>const</code>都能做到，<code>var</code>不能做到的，<code>let</code>和<code>const</code>还能做到。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>不光要会用<code>let</code>和<code>const</code>，更要知道<code>var</code>、<code>let</code>和<code>const</code>之间的区别。</p>
+
       
     </div>
 
@@ -290,6 +389,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/21/read-books/%E6%96%87%E5%BF%83/%E5%BA%8F%E8%A8%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/21/read-books/%E6%96%87%E5%BF%83/%E5%BA%8F%E8%A8%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -482,6 +595,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'MDHuwV3uzeNCUlQ9VtXNQpPD-gzGzoHsz',
+      appKey     : 'Nv7fFAtuVgwaMef5bHF8e07d',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
